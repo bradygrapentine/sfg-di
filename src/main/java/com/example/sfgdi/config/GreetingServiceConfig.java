@@ -1,5 +1,7 @@
 package com.example.sfgdi.config;
 
+import com.example.sfgdi.repositories.EnglishGreetingRepository;
+import com.example.sfgdi.repositories.EnglishGreetingRepositoryImpl;
 import com.example.sfgdi.services.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -24,6 +26,11 @@ public class GreetingServiceConfig {
         return new PropertyInjectedGreetingService();
     }
 
+    @Bean
+    EnglishGreetingRepository englishGreetingRepository() {
+        return new EnglishGreetingRepositoryImpl();
+    }
+
     @Primary
     @Bean
     PrimaryGreetingService primaryGreetingService() {
@@ -32,8 +39,8 @@ public class GreetingServiceConfig {
 
     @Profile("English")
     @Bean
-    I18nGEnglishGreetingService i18nService() {
-        return new I18nGEnglishGreetingService();
+    I18nGEnglishGreetingService i18nService(EnglishGreetingRepository englishGreetingRepository) {
+        return new I18nGEnglishGreetingService(englishGreetingRepository);
     }
 
     @Profile({"Spanish", "default"}) // default profile
