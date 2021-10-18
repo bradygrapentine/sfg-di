@@ -1,11 +1,8 @@
 spring:
   profiles:
-    active:
-    - dog
-    - English
-    - prod
+    active: dog, English
 bg:
-  user: Yuser
+  username: Yuser
   password: Ypass
   jdbcUrl: YUrl
 
@@ -13,6 +10,6 @@ bg:
 spring:
   profiles: prod
 bg:
-  user: prodUser
+  username: prodUser
   password: prodPass
   jdbcUrl: prodUrl

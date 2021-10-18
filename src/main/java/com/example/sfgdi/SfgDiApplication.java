@@ -1,5 +1,6 @@
 package com.example.sfgdi;
 
+import com.example.sfgdi.config.BgConfig;
 import com.example.sfgdi.controllers.*;
 import com.example.sfgdi.datasource.FakeDataSource;
 import org.springframework.boot.SpringApplication;
@@ -49,6 +50,12 @@ public class SfgDiApplication {
 		System.out.println(fakeDataSource.getUsername());
 		System.out.println(fakeDataSource.getPassword());
 		System.out.println(fakeDataSource.getJdbcUrl());
+
+		System.out.println("----------- Config Props Bean");
+		BgConfig bgConfig = ctx.getBean(BgConfig.class);
+		System.out.println(bgConfig.getUsername());
+		System.out.println(bgConfig.getPassword());
+		System.out.println(bgConfig.getJdbcUrl());
 	}
 
 }

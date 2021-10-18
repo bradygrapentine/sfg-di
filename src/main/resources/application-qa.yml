@@ -1,4 +1,4 @@
 bg:
-  user: QaYuser
+  username: QaYuser
   password: QaYpass
   jdbcUrl: QaYUrl
