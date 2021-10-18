@@ -1,7 +1,15 @@
-#spring:
-#  profiles:
-#    active: dog, English
-#bg:
-#  user: Yuser
-#  password: Ypass
-#  jdbcUrl: YUrl
+spring:
+  profiles:
+    active: dog, English, prod
+bg:
+  user: Yuser
+  password: Ypass
+  jdbcUrl: YUrl
+
+---
+spring:
+  profiles: prod
+bg:
+  user: prodUser
+  password: prodPass
+  jdbcUrl: prodUrl

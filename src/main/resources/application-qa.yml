@@ -1,0 +1,4 @@
+bg:
+  user: QaYuser
+  password: QaYpass
+  jdbcUrl: QaYUrl
