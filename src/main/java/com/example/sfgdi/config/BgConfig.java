@@ -4,7 +4,7 @@ package com.example.sfgdi.config;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
-@ConfigurationProperties("bg")
+@ConfigurationProperties("bg") // bg is bound to the username, password, and jdbcUrl properties
 @Configuration
 public class BgConfig {
 
