@@ -1,6 +1,9 @@
 spring:
   profiles:
-    active: dog, English, prod
+    active:
+    - dog
+    - English
+    - prod
 bg:
   user: Yuser
   password: Ypass
